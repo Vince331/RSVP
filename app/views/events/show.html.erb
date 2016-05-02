@@ -1,0 +1,12 @@
+<h1><%= @event.event_name %></h1>
+<h3> Hosted By:  <%= @event.host %></h3>
+<h3>Date of Event:  <%= @event.date %></h3>
+<h3>Time of Event:  <%= @event.time %></h3>
+<h3>Location of Event:  <%= @event.location %></h3>
+<h3>Description of Event: <%= @event.description %></h3>
+
+<%= link_to "RSVP", edit_event_path(@event) %>
+
+<h3>Attendees: <% @event.attendees.each do |x| %>
+  <h5> <%=  x.name %> </h5>
+<% end %>

@@ -1,0 +1,6 @@
+<%= form_for(@event) do |f| %>
+  <%= f.label :attendees %>
+  <%= f.text_field :attendees,:placeholder=>'Full Name' %>
+  <%= f.submit "RSVP" %>
+<% end %>
+
